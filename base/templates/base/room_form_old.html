@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content%}
+<div>
+    <form method="post" action="">
+        {%csrf_token %}   <!--The CSRF token is like an alphanumeric code or random secret value that's peculiar to that particular site. Hence, no other site has the same code. Prevents Cross-Site Request Forgery (CSRF) token-->
+        {{form.as_p}}
+    
+
+        <input type="submit" value="Submit"/>
+    </form>
+</div>
+
+{% endblock content %}
+
